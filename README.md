@@ -29,6 +29,10 @@
     
     sudo update-alternatives --config java
 
+## Remover contêineres, imagens e limpar redes não utilizadas.
+
+    [ "$(docker ps -q)" ] && docker stop $(docker ps -q); [ "$(docker ps -aq)" ] && docker rm $(docker ps -aq); [ "$(docker images -q)" ] && docker rmi $(docker images -q); docker network prune -f
+
 ## Links uteis
 
 * [SpringInitializr](https://start.spring.io/)

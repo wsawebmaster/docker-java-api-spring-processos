@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-processo-table
+      author: wagner_andrade
+      changes:
+        - createTable:
+            tableName: processo
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: numero
+                  type: int
+                  constraints:
+                    nullable: false
+                    
