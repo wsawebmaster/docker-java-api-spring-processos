@@ -44,9 +44,18 @@
 
 - `POST` Adicionar réu a um processo `http://localhost:8080/processos/id/reus`
 
+        {
+            "nome": "Nome do Réu"
+        }
+
 - `GET` Listar todos os processos: `http://localhost:8080/processos`
 - `GET` Listar um processo: `http://localhost:8080/processos/id`
 - `PUT` Atualizar um processo: `http://localhost:8080/processos/id`
+
+        {
+            "numero": 7
+        }
+
 - `DELETE` Excluir um processo: `http://localhost:8080/processos/id`
 
 ![MER](/image.jpg "Imagem dos Endpoins pelo Insomnia")
