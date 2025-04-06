@@ -37,7 +37,13 @@
 ## Endpoints da API
 
 - `POST` Cadastrar Processo `http://localhost:8080/processos`
+
+        {
+            "numero": 1
+        }
+
 - `POST` Adicionar réu a um processo `http://localhost:8080/processos/id/reus`
+
 - `GET` Listar todos os processos: `http://localhost:8080/processos`
 - `GET` Listar um processo: `http://localhost:8080/processos/id`
 - `PUT` Atualizar um processo: `http://localhost:8080/processos/id`
