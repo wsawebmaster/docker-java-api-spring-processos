@@ -13,6 +13,7 @@
 - Docker
 - Docker compose
 - Insomnia
+- Extensão SQL Server Client no VsCode, Dbeaver ou outro software de sua preferência
 
 
 ## Subir PostgreSQL via Docker Compose
@@ -32,6 +33,17 @@
 ## Remover contêineres, imagens e limpar redes não utilizadas.
 
     [ "$(docker ps -q)" ] && docker stop $(docker ps -q); [ "$(docker ps -aq)" ] && docker rm $(docker ps -aq); [ "$(docker images -q)" ] && docker rmi $(docker images -q); docker network prune -f
+
+## Endpoints da API
+
+- `POST` Cadastrar Processo `http://localhost:8080/processos`
+- `POST` Adicionar réu a um processo `http://localhost:8080/processos/id/reus`
+- `GET` Listar todos os processos: `http://localhost:8080/processos`
+- `GET` Listar um processo: `http://localhost:8080/processos/id`
+- `PUT` Atualizar um processo: `http://localhost:8080/processos/id`
+- `DELETE` Excluir um processo: `http://localhost:8080/processos/id`
+
+![MER](/image.jpg "Imagem dos Endpoins pelo Insomnia")
 
 ## Links uteis
 

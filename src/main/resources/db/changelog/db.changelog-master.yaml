@@ -17,4 +17,33 @@ databaseChangeLog:
                   type: int
                   constraints:
                     nullable: false
-                    
+
+  - changeSet:
+      id: 002-create-reu-table
+      author: wagner_andrade
+      changes:
+        - createTable:
+            tableName: reu
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nome
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: processo_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            constraintName: fk_reu_processo
+            baseTableName: reu
+            baseColumnNames: processo_id
+            referencedTableName: processo
+            referencedColumnNames: id
