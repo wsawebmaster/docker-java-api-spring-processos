@@ -58,6 +58,8 @@
 
 - `DELETE` Excluir um processo: `http://localhost:8080/processos/id`
 
+Obs.: Caso queira utilizar o padrão conforme resolução 16 do Conselho Nacional de Justiça, basta incluir os valores entre aspas `"numero": "NNNNNNN-DD.AAAA.JTR.OOOO"` válido tanto no método GET quanto no PUT
+
 ![MER](/image.jpg "Imagem dos Endpoins pelo Insomnia")
 
 ## Links uteis

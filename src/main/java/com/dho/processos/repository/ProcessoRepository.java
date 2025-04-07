@@ -10,6 +10,6 @@ import java.util.UUID;
 
 @Repository
 public interface ProcessoRepository extends JpaRepository<Processo, UUID> {
-    Optional<Processo> findByNumero(int numero);
+    Optional<Processo> findByNumero(String numero);
 }
 

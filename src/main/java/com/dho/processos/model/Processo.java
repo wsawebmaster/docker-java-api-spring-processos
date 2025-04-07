@@ -19,7 +19,7 @@ public class Processo {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     
-    private int numero;
+    private String numero;
     
     @JsonManagedReference
     @OneToMany(mappedBy = "processo", cascade = CascadeType.ALL, orphanRemoval = true)

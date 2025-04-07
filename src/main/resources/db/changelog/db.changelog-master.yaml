@@ -14,7 +14,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: numero
-                  type: int
+                  type: varchar(24)
                   constraints:
                     nullable: false
 
